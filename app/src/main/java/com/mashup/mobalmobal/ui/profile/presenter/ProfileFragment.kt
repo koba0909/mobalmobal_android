@@ -43,7 +43,6 @@ class ProfileFragment : BaseViewBindingFragment<FragmentProfileBinding>(),
     ): FragmentProfileBinding = FragmentProfileBinding.inflate(inflater, container, false)
 
     override fun onSetupViews(view: View) {
-        super.onSetupViews(view)
         binding.recyclerViewProfile.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = profileAdapter
@@ -51,10 +50,9 @@ class ProfileFragment : BaseViewBindingFragment<FragmentProfileBinding>(),
     }
 
     override fun onBindViewModels() {
-        super.onBindViewModels()
         with(profileViewModel) {
             toastSubject.observeOnMain()
-                .subscribeWithErrorLogger { context?.showToast(it, Toast.LENGTH_SHORT) }
+                .subscribeWithErrorLogger(::showToast)
                 .addToDisposables()
 
             profileSubject.observeOnMain()
