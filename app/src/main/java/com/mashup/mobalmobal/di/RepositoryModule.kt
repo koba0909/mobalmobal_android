@@ -1,5 +1,6 @@
 package com.mashup.mobalmobal.di
 
+import com.mashup.mobalmobal.ui.profile.data.repository.MockProfileRepositoryImpl
 import com.mashup.mobalmobal.ui.profile.data.repository.ProfileRepository
 import com.mashup.mobalmobal.ui.profile.data.repository.ProfileRepositoryImpl
 import com.mashup.mobalmobal.ui.profile.data.service.ProfileService
@@ -12,7 +13,11 @@ import dagger.hilt.android.components.ActivityRetainedComponent
 @InstallIn(ActivityRetainedComponent::class)
 object RepositoryModule {
 
+//    @Provides
+//    fun provideProfileRepository(profileService: ProfileService): ProfileRepository =
+//        ProfileRepositoryImpl(profileService)
+
     @Provides
-    fun provideProfileRepository(profileService: ProfileService): ProfileRepository =
-        ProfileRepositoryImpl(profileService)
+    fun provideMockProfileRepository(): ProfileRepository =
+        MockProfileRepositoryImpl()
 }
