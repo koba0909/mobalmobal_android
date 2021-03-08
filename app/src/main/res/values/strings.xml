@@ -25,4 +25,8 @@
     <string name="clip_success_text">복사됐습니다.</string>
     <string name="clip_failure_text">복사에 실패하였습니다.</string>
     <string name="account_number_description">충전이 완료되면 연락드릴게요</string>
+
+    <string name="donation">후원</string>
+    <string name="donation_hint">후원할 금액을 입력하세요.</string>
+    <string name="donate">후원하기</string>
 </resources>

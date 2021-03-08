@@ -10,4 +10,9 @@
     <color name="gray_c4_opa_30">#4DC4C4C4</color>
     <color name="dark_grey">#151516</color>
     <color name="white">#FDFDFD</color>
+    <color name="gray_1">#11ffffff</color>
+    <color name="gray_2">#797979</color>
+    <color name="gray_3">#252525</color>
+    <color name="gray_4">#474747</color>
+    <color name="lime">#7aff97</color>
 </resources>
